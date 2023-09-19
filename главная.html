@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<title>Сайт ИУ3-31Б</title>
+<meta charset="UTF-8" />
+<link rel="shortcut icon" type="image/png" href="https://cdn.shopify.com/s/files/1/2594/4244/t/22/assets/determine.png" />
+<link rel="stylesheet" href="стиль.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<style>
+body{
+	background: #e3faf1;
+	font-family: "mumblers_demoregular";
+}
+.whapper{
+display: grid;
+grid-template-columns: 1fr 5fr;
+}
+
+@font-face {
+    font-family: 'mumblers_demoregular';
+    src: url('mumblers_demo-webfont.woff2') format('woff2'),
+         url('mumblers_demo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+#groceries{
+  width: 600px;
+  min-height: 100vh;
+  padding-top: 20px;
+  margin:auto;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.50);
+}
+
+#title{
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+#input{
+  width: 75%;
+  display: flex;
+  justify-content: center;
+}
+
+#input i{
+  cursor: pointer;
+  font-size: 2rem;
+  color: orange;
+}
+
+#input input{
+  font-family: inherit;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  border-bottom: 3px solid black;
+}
+
+#all_items{
+  font-size: 1.5rem;
+  width: 75%;
+}
+
+@media(max-width:480px){
+  #title{
+    font-size: 1rem;
+  }
+
+  #input i{
+    font-size: 1.5rem;
+  }
+
+  #input input{
+    font-size: 1rem;
+  }
+
+  #all-items{
+    font-size: 1rem;
+  }
+}
+
+</style>
+
+<body>
+
+<div class="container">
+<header>
+<hr color="#280028" size="5">
+<h1><center>IU3-31B</center></h1>
+<hr color="#280028" size="5">
+</header>
+
+<div class="whapper">
+<div class="category-wrap">
+<h3>Меню</h3>
+<ul>
+<li><a href="главная.html">Главная</a></li>
+<li><a href="расписание.html">Расписание</a></li>
+<li><a href="сессия.html">Сессия</a></li>
+<li><a href="фото.html">Фото</a></li>
+<li><a href="преподаватели.html">Преподаватели</a></li>
+</ul>
+</div>
+
+<main>
+<center><h2>Скоро здесь появится важная информация. А пока можете воспользоваться этой страницой как ежедневником:)</h2></center>
+<br>
+    <div class="container">
+      <div id="groceries">
+        <div id="title">
+          <h2>Список дел</h2>
+        </div>
+        <div id="input">
+          <i id="pencil" class="fas fa-pencil-alt"></i>
+          <input id="user_input">
+        </div>
+        <div id="all_items"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script1.js"></script>
+
+
+</div>
+</body>
+
+</html>

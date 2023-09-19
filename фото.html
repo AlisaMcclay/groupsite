@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+<title>Сайт ИУ3-31Б</title>
+<meta charset="UTF-8" />
+<link rel="shortcut icon" type="image/png" href="https://cdn.shopify.com/s/files/1/2594/4244/t/22/assets/determine.png" />
+<link rel="stylesheet" href="стиль.css">
+</head>
+
+<style>
+body{
+  overflow-y: hidden;
+}
+
+
+
+.image{
+  display: none;
+}
+
+/* Next & previous buttons */
+#prev{
+  position: absolute;
+  top: 43%;
+
+
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#next{
+  position: absolute;
+  top: 43%;
+  right: 418px;
+  cursor: pointer;
+  padding: 16px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+#prev:hover, #next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dots{
+  text-align: center;
+  margin-top: 2%;
+}
+
+.dot{
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  /* transition from one do to the next */
+  transition: background-color 0.6s ease;
+}
+
+/* We create this class with JavaScript. It makes the current dot darker gray */
+.active{
+  background-color: #717171;
+}
+
+/* create fade animation when switching between images */
+.fade{
+/* Animation support for different browsers */
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media(max-width:768px){
+    .container{
+        width: 100%;
+    }
+}
+	.whapper{
+display: grid;
+grid-template-columns: 1fr 2fr;
+}
+</style>
+
+<body>
+<div class="container">
+
+<header>
+<hr color="#280028" size="5">
+
+<h1><center>IU3-31B</center></h1>
+<hr color="#280028" size="5">
+</header>
+
+<div class="whapper">
+<div class="category-wrap">
+<h3>Меню</h3>
+<ul>
+<li><a href="главная.html">Главная</a></li>
+<li><a href="расписание.html">Расписание</a></li>
+<li><a href="сессия.html">Сессия</a></li>
+<li><a href="фото.html">Фото</a></li>
+<li><a href="преподаватели.html">Преподаватели</a></li>
+</ul>
+</div>
+
+<div>
+<figure>
+<i>Фоточек нашей группы нет, но есть милые животные:) </i>
+        <div class="image fade">
+            <img src="https://avatars.mds.yandex.net/get-zen_doc/1925593/pub_5fd725705a2c8e1f2c4dd033_5fd727db9480ec78dc35c7d7/scale_1200" width="60%">
+        </div>
+        <div class="image fade">
+            <img src="https://ic.pics.livejournal.com/terranova2017/56708048/1661000/1661000_original.jpg" width="60%">
+        </div>
+        <div class="image fade">
+            <img src="https://4tololo.ru/sites/default/files/images/20122112123618.jpg" width="60%">
+        </div>
+        <div class="image fade">
+            <img src="https://proprikol.ru/wp-content/uploads/2020/09/kartinki-milyh-zhivotnyh-4.jpg" width="60%">
+        </div>
+        <div class="image fade">
+            <img src="https://oir.mobi/uploads/posts/2021-05/1621973347_23-oir_mobi-p-zhivotnie-s-detenishami-milie-zhivotnie-kr-24.jpg" width="60%">
+        </div>
+        <div class="image fade">
+            <img src="https://i.pinimg.com/originals/2f/30/df/2f30dff8d635edaa2f0329ec0cb7a5ac.jpg" width="60%">
+        </div>
+        <div class="image fade">
+            <img src="https://s1.1zoom.ru/b5050/388/Raccoons_Grass_Bokeh_Snout_Glance_Cute_Paws_574118_2560x1440.jpg" width="60%">
+        </div>
+        <div class="image fade">
+            <img src="https://get.wallhere.com/photo/1920x1200-px-animals-dogs-grass-puppies-1640769.jpg" width="60%">
+        </div>
+
+        <a id="prev" onclick="show_slide(-1)">&#10094;</a>
+        <a id="next" onclick="show_slide(1)">&#10095;</a>
+
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    <script src="script.js"></script>
+	</figure>
+
+</div>
+
+
+
+</div>
+
+</body>
+
+</html>
